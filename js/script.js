@@ -1,9 +1,5 @@
 
 function newItem() {
-    
-
-
-
     //javascript
     //1. Adding a new item to the list of items: 
     let li = $('<li></li>');
@@ -38,6 +34,13 @@ function newItem() {
     // 4. Reordering the items: 
     $('#list').sortable();
 }
+
+// Add new item on form submit:
+let form = $('#form');
+form.on('submit', function (event) {
+    event.preventDefault();
+    newItem();
+})
 
 
 
